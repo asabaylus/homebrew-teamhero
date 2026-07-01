@@ -5,13 +5,13 @@
 class Teamhero < Formula
   desc "Developer contribution report generator with interactive TUI"
   homepage "https://github.com/asabaylus/teamhero.cli"
-  version "0.3.0"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/asabaylus/teamhero.cli/releases/download/v0.3.0/teamhero-v0.3.0-darwin-amd64.tar.gz"
-      sha256 "b9d376555705fbccefa2e968295e50370055587f3e3b7290ae60424f567da304"
+      url "https://github.com/asabaylus/teamhero.cli/releases/download/v0.4.0/teamhero-v0.4.0-darwin-amd64.tar.gz"
+      sha256 "6df5d01ffa2285087bec8c169733d03174a7b9e4b5f669dab6ba52f51e4b7242"
 
       define_method(:install) do
         bin.install "teamhero-tui" => "teamhero"
@@ -19,8 +19,8 @@ class Teamhero < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/asabaylus/teamhero.cli/releases/download/v0.3.0/teamhero-v0.3.0-darwin-arm64.tar.gz"
-      sha256 "1bbf6c9854db048e93d3a811916fb5760278ce2c820dd2106d47fd25e231e948"
+      url "https://github.com/asabaylus/teamhero.cli/releases/download/v0.4.0/teamhero-v0.4.0-darwin-arm64.tar.gz"
+      sha256 "059b8d203b9f4dea1c29c07c94f7558d2c191b27e02adb44e48d68593883f3f2"
 
       define_method(:install) do
         bin.install "teamhero-tui" => "teamhero"
@@ -31,16 +31,16 @@ class Teamhero < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/asabaylus/teamhero.cli/releases/download/v0.3.0/teamhero-v0.3.0-linux-amd64.tar.gz"
-      sha256 "3f6ae6a7e40181b8382ab8d733e6cef024b0fc6f774c89f65b860dce883a22ea"
+      url "https://github.com/asabaylus/teamhero.cli/releases/download/v0.4.0/teamhero-v0.4.0-linux-amd64.tar.gz"
+      sha256 "14d9f753299229f0530eca3e5bf29b41d7d4a25a92034e9b7a70dfd30b1006cd"
       define_method(:install) do
         bin.install "teamhero-tui" => "teamhero"
         bin.install "teamhero-service" if File.exist?("teamhero-service")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/asabaylus/teamhero.cli/releases/download/v0.3.0/teamhero-v0.3.0-linux-arm64.tar.gz"
-      sha256 "fae9ba1d15937bd32e8764634a021c77e1608e610531ec4d77a0f323164e008b"
+      url "https://github.com/asabaylus/teamhero.cli/releases/download/v0.4.0/teamhero-v0.4.0-linux-arm64.tar.gz"
+      sha256 "eb2d47ed9e1c5f3e107d2e001a22290237e1142c4358b43ee5161727da4a646c"
       define_method(:install) do
         bin.install "teamhero-tui" => "teamhero"
         bin.install "teamhero-service" if File.exist?("teamhero-service")
